@@ -1,0 +1,128 @@
+.upload-zone-wrapper {
+  position: relative;
+}
+
+.upload-zone {
+  border: 3px dashed rgba(255, 255, 255, 0.4);
+  border-radius: 20px;
+  padding: 60px 40px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  color: white;
+}
+
+.upload-zone:hover {
+  border-color: rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.08);
+  transform: scale(1.01);
+}
+
+.upload-zone.active {
+  border-color: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.12);
+  transform: scale(1.02);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.upload-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.upload-icon {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  font-size: 2.5rem;
+  animation: bounce 2s ease-in-out infinite;
+}
+
+.upload-icon svg {
+  width: 100%;
+  height: 100%;
+  stroke: currentColor;
+}
+
+.upload-zone h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-top: 16px;
+}
+
+.upload-zone p {
+  opacity: 0.85;
+  font-size: 0.95rem;
+}
+
+.upload-btn {
+  background: white;
+  color: #667eea;
+  border: none;
+  padding: 12px 32px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  margin: 8px 0;
+}
+
+.upload-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.3);
+}
+
+.upload-btn:active {
+  transform: translateY(0);
+}
+
+.upload-hint {
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-top: 16px;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #4ade80, #60a5fa);
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+.upload-error {
+  background: rgba(239, 68, 68, 0.9);
+  color: white;
+  padding: 16px;
+  border-radius: 12px;
+  margin-top: 16px;
+  font-weight: 500;
+  border-left: 4px solid #dc2626;
+  box-shadow: 0 8px 20px rgba(220, 38, 38, 0.3);
+}
+
+@media (max-width: 640px) {
+  .upload-zone {
+    padding: 40px 20px;
+  }
+  .upload-zone h2 {
+    font-size: 1.2rem;
+  }
+}
