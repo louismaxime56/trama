@@ -1,0 +1,2 @@
+export class DeploymentProvider { async deploy(){throw new Error('Not implemented');} async getStatus(){throw new Error('Not implemented');} async getLogs(){throw new Error('Not implemented');} async redeploy(){throw new Error('Not implemented');} async destroy(){throw new Error('Not implemented');} }
+export class DemoStaticProvider extends DeploymentProvider { async deploy({directory}){ return {status:'Live',directory}; } async getStatus(){return 'Live';} async getLogs(){return [];} async redeploy(args){return this.deploy(args);} async destroy(){return true;} }
